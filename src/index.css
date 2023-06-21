@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: #e5e5dc;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+p {
+  font-size: 1.3em;
+} 
+p.card-text {
+  font-size: 1em;
+}
+ 
+
+/* using this css to help show that the images are clickable */
+.card-img-top {
+  transition: transform 0.3s ease-in-out;
+} 
+.card-img-top:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
