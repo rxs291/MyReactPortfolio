@@ -7,6 +7,13 @@ body {
   background-color: #e5e5dc;
 }
 
+:root {
+    --navy : #26495c ;
+    --ochre : #c4a35a ;
+    --cream: #c66b3d ;
+    --lightGrey: #e5e5dc;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
