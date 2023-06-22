@@ -19,7 +19,23 @@ code {
     monospace;
 }
 
+h1{
+  color: var(--cream) ;
+  font-style: italic;
+  transition: transform 0.3s ease-in-out;
+}
 
+h5{
+  color: var(--navy);
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.3em;
+
+}
+h5:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
 
 p {
   font-size: 1.3em;
@@ -27,13 +43,41 @@ p {
 p.card-text {
   font-size: 1em;
 }
+
+.cardContainer{
+  width: 25rem;
+}
  
 
 /* using this css to help show that the images are clickable */
 .card-img-top {
   transition: transform 0.3s ease-in-out;
+  padding-bottom: 10px;
+  border-radius: 50px; 
 } 
 .card-img-top:hover {
   transform: scale(1.02);
   cursor: pointer;
+}
+
+/* this will help toggle the display of the cards on the portfolio page */
+
+.hidden {
+  display: none;
+}
+
+.list1 {
+  display: block;
+}
+
+.list2 {
+  display: block;
+}
+
+.list3 {
+  display: block;
+}
+
+.list4 {
+  display: block;
 }
