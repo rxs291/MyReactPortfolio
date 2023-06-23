@@ -1,4 +1,4 @@
-import React, { useState, useEffect   } from "react";
+import React, { useState, useEffect } from "react";
 import backgroundImage1 from '../../images/project1.png';
 import backgroundImage2 from '../../images/project2.JPG';
 import backgroundImage3 from '../../images/Capture1.JPG';
@@ -21,6 +21,9 @@ import techBloggers from '../../images/techBloggers.JPG'
 import regexTutorial from '../../images/regexTutorial.JPG'
 import friendsNetwork from '../../images/friendsNetwork.JPG'
 import textEditor from '../../images/textEditor.JPG'
+
+
+import CarouselComponent from "../Carousel";
 
 
 
@@ -48,9 +51,9 @@ export default function Portfolio() {
 
 
   });
-  const [activeElement, setActiveElement] = useState('');  
+  const [activeElement, setActiveElement] = useState('');
   const handleClick = (element) => {
-    setActiveElement(element === activeElement ? '' : element); 
+    setActiveElement(element === activeElement ? '' : element);
     scrollToBottom();
   };
 
@@ -69,6 +72,9 @@ export default function Portfolio() {
       [modalName]: false,
     }));
   };
+
+
+
   const scrollToBottom = () => {
     window.scrollTo({
       top: document.documentElement.scrollHeight,
@@ -84,16 +90,31 @@ export default function Portfolio() {
   return (
 
     <>
-      <div className="col-9 container-fluid pb-5">
+      <div className="col-9 d-flex flex-wrap container-fluid pb-5">
 
-        <h1>Projects & Challenges</h1>
-        <p className="myFont">
-          What you're here to see I bet! Thank you for giving this a check! This is every assignment I completed during the bootcamp. If the assignment could be posted on Github/Heroku, then the title will be highlighted for you to checkout. If not, all the pictures will have a modal with the grade I received for it as well as the grader's comments on my application! <i>(Fun Fact: Graders left ZERO feedback on projects. I know.) </i>
-        </p>
-        <br />
-        <p>Click on the <i>title</i> to visit the website or click on the <i>image</i> to see my thoughts/contributions and grader feedback if applicable! </p>
 
-        <div className="d-flex mt-5 flex-wrap justify-content-around gap-5" >
+        <div className="col-5">
+
+          <div>
+            <h1>Projects & Challenges</h1>
+            <p className="myFont">
+              What you're here to see I bet! Thank you for giving this a check! This is every assignment I completed during the bootcamp. If the assignment could be posted on Github/Heroku, then the title will be highlighted for you to checkout. If not, all the pictures will have a modal with the grade I received for it as well as the grader's comments on my application! <i>(Fun Fact: Graders left ZERO feedback on projects. I know.) </i>
+            </p>
+            <br />
+            <p>Click on the <i>title</i> to visit the website or click on the <i>image</i> to see my thoughts/contributions and grader feedback if applicable! </p>
+
+          </div> 
+          <div>
+          
+
+          <CarouselComponent />
+
+          </div> 
+        </div>
+
+
+
+        <div className="col-7 d-flex mt-5 flex-wrap justify-content-around gap-5" >
 
           {/* project 1 */}
           <div className="text-center" >
@@ -137,35 +158,33 @@ export default function Portfolio() {
 
 
 
-
-
         </div>
 
       </div>
 
 
-      <div className="d-flex justify-content-around container-fluid">
+
+
+      <div className="col-6 d-flex justify-content-around container-fluid">
         <div onClick={() => handleClick('list1')}>
           <h3 >testing1</h3>
-          
+
         </div>
         <div onClick={() => handleClick('list2')} >
           <h3>testing 2</h3>
         </div>
         <div onClick={() => handleClick('list3')}>
-        <h3>testing 3 </h3>
+          <h3>testing 3 </h3>
         </div>
         <div onClick={() => handleClick('list4')}>
-        <h3>testing 4 </h3>
+          <h3>testing 4 </h3>
         </div>
       </div>
 
 
-
-
-      <div   className={`col-6 container-fluid hidden pb-5 ${activeElement === 'list1' ? 'list1' : ''}`}  > 
-        {/* this container houses all the Challenges */} 
-        <div className="d-flex mt-5 flex-wrap justify-content-around gap-5" >  
+      <div className={`col-6 container-fluid hidden pb-5 ${activeElement === 'list1' ? 'list1' : ''}`}  >
+        {/* this container houses all the Challenges */}
+        <div className="d-flex mt-5 flex-wrap justify-content-around gap-5" >
           <div className="text-center" >
             <a style={{ textDecoration: 'none' }} href="https://rxs291.github.io/BookOne-HTML-Sematics-Update-/"><h5>
               Challenge1: CodeRefactor </h5></a>
@@ -176,7 +195,7 @@ export default function Portfolio() {
               </div>
             </div>
           </div>
- 
+
           <div className="text-center" >
             <a style={{ textDecoration: 'none' }} href="https://rxs291.github.io/Book2-Portfolio-Start-Up/#"><h5>
               Challenge2: First Portfolio </h5></a>
@@ -190,18 +209,18 @@ export default function Portfolio() {
 
           <div className="text-center" >
             <a style={{ textDecoration: 'none' }} href="https://rxs291.github.io/PasswordGenerator/"><h5>
-            Challenge3: PasswordGenerator </h5></a>
+              Challenge3: PasswordGenerator </h5></a>
             <div className="cardContainer">
               <img onClick={() => handleModalOpen('modal6')} src={passwordGenerator} className="card-img-top" alt="..."></img>
               <div className="card-body">
                 <p className="card-text">An application that asks you a few questions and generates a password based on your requests.</p>
               </div>
             </div>
-          </div> 
+          </div>
 
           <div className="text-center" >
             <a style={{ textDecoration: 'none' }} href="https://rxs291.github.io/QuizAndScoreKeeper/"><h5>
-            Challenge4: QuizAndScoreKeeper</h5></a>
+              Challenge4: QuizAndScoreKeeper</h5></a>
             <div className="cardContainer">
               <img onClick={() => handleModalOpen('modal7')} src={quizAndScorekeeper} className="card-img-top" alt="..."></img>
               <div className="card-body">
@@ -209,19 +228,20 @@ export default function Portfolio() {
               </div>
             </div>
           </div>
-
- 
         </div>
-
       </div>
 
 
 
 
-      <div   className={`col-6 container-fluid hidden pb-5 ${activeElement === 'list2' ? 'list2' : ''}`}  > 
+
+
+
+
+      <div className={`col-6 container-fluid hidden pb-5 ${activeElement === 'list2' ? 'list2' : ''}`}  >
         {/* this container houses all the Challenges */}
 
-        <div className="d-flex mt-5 flex-wrap justify-content-around gap-5" >  
+        <div className="d-flex mt-5 flex-wrap justify-content-around gap-5" >
 
           <div className="text-center" >
             <a style={{ textDecoration: 'none' }} href="https://rxs291.github.io/DayPlanner/"><h5>
@@ -233,10 +253,10 @@ export default function Portfolio() {
               </div>
             </div>
           </div>
- 
+
           <div className="text-center" >
             <a style={{ textDecoration: 'none' }} href=" https://rxs291.github.io/WeatherForecaster/"><h5>
-            Challenge6: WeatherForecaster </h5></a>
+              Challenge6: WeatherForecaster </h5></a>
             <div className="cardContainer">
               <img onClick={() => handleModalOpen('modal9')} src={weatherDashboard} className="card-img-top" alt="..."></img>
               <div className="card-body">
@@ -245,41 +265,46 @@ export default function Portfolio() {
             </div>
           </div>
 
-  
+
 
           <div className="text-center" >
             <a style={{ textDecoration: 'none' }} href="https://drive.google.com/file/d/15q1KjnbFvL6gxQOR3b5xBIMfSNji4cIW/view"><h5>
-            Challenge9: Readme Generator</h5></a>
+              Challenge9: Readme Generator</h5></a>
             <div className="cardContainer">
               <img onClick={() => handleModalOpen('modal10')} src={readmeGenerator} className="card-img-top" alt="..."></img>
               <div className="card-body">
                 <p className="card-text">Quickly and easily generate a README file by using a command-line application to generate one. This allows the project creator to devote more time working on the project. The title links to a video of the application. </p>
               </div>
             </div>
-          </div>  
+          </div>
 
 
           <div className="text-center" >
             <a style={{ textDecoration: 'none' }} href="https://drive.google.com/file/d/1JrSOYYTGwTmB-DcVkV3MWSJoSzgxl9nT/view"><h5>
-            Challenge10: SVG Logo Maker</h5></a>
+              Challenge10: SVG Logo Maker</h5></a>
             <div className="cardContainer">
               <img onClick={() => handleModalOpen('modal11')} src={svgLogoMaker} className="card-img-top" alt="..."></img>
               <div className="card-body">
                 <p className="card-text">Another command line application that through a series of questions will generate a logo on a .svg file! The title links to a video of the application. </p>
               </div>
             </div>
-          </div> 
- 
+          </div>
+
         </div>
 
       </div>
 
 
 
-      <div   className={`col-6 container-fluid hidden pb-5 ${activeElement === 'list3' ? 'list3' : ''}`}  > 
-        {/* this container houses all the Challenges */} 
 
-        <div className="d-flex mt-5 flex-wrap justify-content-around gap-5" >  
+
+
+
+
+      <div className={`col-6 container-fluid hidden pb-5 ${activeElement === 'list3' ? 'list3' : ''}`}  >
+        {/* this container houses all the Challenges */}
+
+        <div className="d-flex mt-5 flex-wrap justify-content-around gap-5" >
 
           <div className="text-center" >
             <a style={{ textDecoration: 'none' }} href="https://note-taker-rxs291.herokuapp.com/"><h5>
@@ -290,55 +315,60 @@ export default function Portfolio() {
                 <p className="card-text">An application that can be used to write and save notes.</p>
               </div>
             </div>
-          </div> 
- 
-  
- 
+          </div>
+
+
+
           <div className="text-center" >
             <a style={{ textDecoration: 'none' }} href=" https://drive.google.com/file/d/1QENejUbI0rEbUf5gREckd9QmZNEZ-6rx/view"><h5>
-            Challenge12: Employee Tracker </h5></a>
+              Challenge12: Employee Tracker </h5></a>
             <div className="cardContainer">
               <img onClick={() => handleModalOpen('modal13')} src={employeeTracker} className="card-img-top" alt="..."></img>
               <div className="card-body">
                 <p className="card-text">
-                A CLI app that interacts with information stored in a database.
+                  A CLI app that interacts with information stored in a database.
                 </p>
               </div>
             </div>
-          </div> 
-  
+          </div>
+
 
           <div className="text-center" >
             <a style={{ textDecoration: 'none' }} href="https://drive.google.com/file/d/1nOSrCxf4d8umqNnCqFToyb6_-qFlPSH1/view"><h5>
-            Challenge13: E-commerce Back End </h5></a>
+              Challenge13: E-commerce Back End </h5></a>
             <div className="cardContainer">
               <img onClick={() => handleModalOpen('modal14')} src={ecomBackend} className="card-img-top" alt="..."></img>
               <div className="card-body">
                 <p className="card-text">The backend portion of an ecommerce site! Full create, request, update, delete operations. </p>
               </div>
             </div>
-          </div>   
+          </div>
 
           <div className="text-center" >
             <a style={{ textDecoration: 'none' }} href="https://techbloggers.herokuapp.com"><h5>
-            Challenge14: Tech Blog</h5></a>
+              Challenge14: Tech Blog</h5></a>
             <div className="cardContainer">
               <img onClick={() => handleModalOpen('modal15')} src={techBloggers} className="card-img-top" alt="..."></img>
               <div className="card-body">
                 <p className="card-text">A website that allows the user to post blogs, delete them from from their profile page and comment on other posts!</p>
               </div>
             </div>
-          </div> 
- 
-        </div> 
+          </div>
+
+        </div>
       </div>
 
 
 
-      <div   className={`col-6 container-fluid hidden pb-5 ${activeElement === 'list4' ? 'list4' : ''}`}  > 
-        {/* this container houses all the Challenges */} 
 
-        <div className="d-flex mt-5 flex-wrap justify-content-around gap-5" >  
+
+
+
+
+
+      <div className={`col-6 container-fluid hidden pb-5 ${activeElement === 'list4' ? 'list4' : ''}`}  >
+        {/* this container houses all the Challenges */}
+        <div className="d-flex mt-5 flex-wrap justify-content-around gap-5" >
 
           <div className="text-center" >
             <a style={{ textDecoration: 'none' }} href="https://gist.github.com/rxs291/ab60e1d875e59b94f7e5f8ab545f7f20"><h5>
@@ -349,46 +379,37 @@ export default function Portfolio() {
                 <p className="card-text">A tutorial that explains how a specific regular expression, or regex, functions by breaking down each part of the expression and describing what it does. This assignment was completed in a gitHub gist.</p>
               </div>
             </div>
-          </div> 
-   
+          </div>
+
           <div className="text-center" >
             <a style={{ textDecoration: 'none' }} href=" https://drive.google.com/file/d/1g-aidqEs8xgF_XWaPaDnQlxcp39IK85E/view"><h5>
-            Challenge18: Social Network API </h5></a>
+              Challenge18: Social Network API </h5></a>
             <div className="cardContainer">
               <img onClick={() => handleModalOpen('modal17')} src={friendsNetwork} className="card-img-top" alt="..."></img>
               <div className="card-body">
                 <p className="card-text">
-                Built an API for a social network web application where users can share their thoughts, react to friend's thoughts, and create a friend list.
-                   The title links to a video of the application.
+                  Built an API for a social network web application where users can share their thoughts, react to friend's thoughts, and create a friend list.
+                  The title links to a video of the application.
                 </p>
               </div>
             </div>
-          </div> 
-
- 
- 
-  
+          </div>
 
           <div className="text-center" >
             <a style={{ textDecoration: 'none' }} href="https://finaltexteditor.herokuapp.com/"><h5>
-            Challenge13: (PWA): Text Editor </h5></a>
+              Challenge13: (PWA): Text Editor </h5></a>
             <div className="cardContainer">
               <img onClick={() => handleModalOpen('modal18')} src={textEditor} className="card-img-top" alt="..."></img>
               <div className="card-body">
                 <p className="card-text">Built a text editor that runs in browser, but is downloadable and can run offline. </p>
               </div>
             </div>
-          </div>   
- 
- 
+          </div>
         </div>
-
-
-
       </div>
 
 
-      
+
 
 
       {/* all modals connected to their own picture */}

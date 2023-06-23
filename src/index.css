@@ -40,13 +40,21 @@ h5:hover {
 p {
   font-size: 1.3em;
 } 
+
+
+
+
+/* ---------------  protfolio CSS all below here ----------------------------  */
+
 p.card-text {
   font-size: 1em;
 }
+ 
 
 .cardContainer{
   width: 25rem;
 }
+ 
  
 
 /* using this css to help show that the images are clickable */
