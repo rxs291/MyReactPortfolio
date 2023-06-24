@@ -25,6 +25,16 @@ h1{
   transition: transform 0.3s ease-in-out;
 }
 
+h2{
+  text-align: center;
+  color: var(--cream);
+  font-style: italic;
+  padding-top: .6em;
+  border-bottom: 4px solid var(--cream);
+  width: 50%;
+  float: center;
+}
+
 h5{
   color: var(--navy);
   font-style: italic;
@@ -51,9 +61,16 @@ p.card-text {
 }
  
 
+/* for the projects */
+.cardContainer1{
+  width: 28rem;
+}
+
+/* for the challenges */
 .cardContainer{
   width: 25rem;
 }
+
  
  
 
