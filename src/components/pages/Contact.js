@@ -1,18 +1,131 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import styled from "styled-components";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 export default function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_6qj37jc', 'template_htna63o', form.current, 'T1p2PTfGwcRvD4fck')
+      .then((result) => {
+        console.log(result.text);
+        console.log('message sent')
+        e.target.reset();
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
+
   return (
-    <div class="col-9 container-fluid">
-      <h1>Contact Page</h1>
-      <p>
-        Jean shorts JOMO YOLO VHS marfa ugh, thundercats scenester cliche tote bag unicorn fit occupy. Leggings fashion axe cloud bread, chia green juice copper mug hashtag cardigan taxidermy meditation hell of. Shabby chic disrupt vaporware, hell of paleo you probably haven't heard of them pinterest migas. Meggings franzen hexagon fam marfa. You probably haven't heard of them taiyaki artisan banh mi echo park. Gorpcore hammock enamel pin plaid trust fund venmo. Activated charcoal YOLO gastropub tilde marfa.
+    <div>
+      <div id="contactContainer" className="container d-flex flex-wrap justify-content-around  mt-5 pt-5">
+        <div>
+        <h1 className='pb-4'>Contact Me Here</h1>
+        <ul>
+          <li id='linksList'>
+            <FontAwesomeIcon icon={faLinkedin} size='2x' />
+            <a id='contactLinks' href='https://www.linkedin.com/in/rex-ki-sar-797a82279/'> https://www.linkedin.com/</a>
+          </li>
+          <li id='linksList'>
+            <FontAwesomeIcon icon={faEnvelope} size='2x' />
+            <a id='contactLinks' href="#"> rxs291@yahoo.com</a>
+          </li>
+          <li id='linksList'>
+            <FontAwesomeIcon icon={faGithub} size='2x' />
+            <a id='contactLinks' href="https://github.com/rxs291"> https://github.com/rxs291</a>
+          </li>
+          <li id='linksList'>
+            <FontAwesomeIcon icon={faInstagram} size='2x' />
+            <a id='contactLinks' href='https://www.instagram.com/sarchanrex/'> https://www.instagram.com/</a>
+          </li>
+        </ul>
+        </div>
+        <div>
 
-        Trust fund readymade tousled, af hexagon kombucha shoreditch cray adaptogen tote bag tumblr whatever DIY. Vegan trust fund leggings hammock jawn fam cupping, tote bag etsy PBR&B health goth pug raclette tumblr. Literally bruh health goth green juice portland bicycle rights, palo santo tumblr prism. Same etsy meditation wolf.
+        <StyledContactForm>
+          <form ref={form} onSubmit={sendEmail}>
+            <label htmlFor="name">Name</label>
+            <input type="text" id="name" name="user_name" />
+            <label htmlFor="email">Email</label>
+            <input type="email" id="email" name="user_email" />
+            <label htmlFor="message">Message</label>
+            <textarea id="message" name="message" />
+            <input type="submit" value="Send" />
+          </form>
+        </StyledContactForm>
+        </div>
 
-        Banh mi la croix lumbersexual DIY paleo, mustache dreamcatcher kitsch salvia. Four loko put a bird on it fashion axe kogi VHS. Selfies raclette poutine hot chicken. Hashtag fanny pack mustache vibecession. Chillwave four loko lyft cred PBR&B, activated charcoal mlkshk lo-fi blog cloud bread pinterest.
+        <div className="container text-center mt-4 pt-5">
+        <p><i>Thank you for visiting!</i></p>
+      </div>
+        
+      </div>
 
-
-      </p>
+       
     </div>
   );
 }
+
+const StyledContactForm = styled.div`
+  width: 100%;
+
+  form {
+    display: flex;
+    width: 27rem;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 16px; 
+
+    input,
+    textarea {
+      width: 100%;
+      height: 35px;
+      padding: 7px;
+      outline: none;
+      border-radius: 5px;
+      border: 3px solid var(--cream);
+
+      &:focus {
+        border: 2px solid rgba(38, 73, 92, 1);
+      }
+    }
+
+    textarea {
+      min-height: 100px;
+      max-height: 200px;
+    }
+
+    label {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+
+    input[type="submit"] {
+      margin-top: 2rem;
+      cursor: pointer;
+      background: rgb(249, 105, 14);
+      color: white;
+      border: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    form {
+      font-size: 14px;
+
+      input,
+      textarea {
+        height: 30px;
+        padding: 5px;
+      }
+
+      label {
+        font-size: 1.2rem;
+      }
+    }
+  }
+`;

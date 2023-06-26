@@ -74,10 +74,13 @@ export default function Portfolio() {
 
     <>
 
+ 
+    <div id="portfolioContainer" className="container-fluid mb-5"   >
+
       <div className="col-9 container-fluid">
 
         <div>
-          <h1>Projects & Challenges</h1>
+        <h1 className="pt-5">Projects & Challenges</h1>
           <p className="myFont">
             What you're here to see I bet! Thank you for giving this a check! This is every assignment I completed during the bootcamp. If the assignment could be posted on Github/Heroku, then the title will be highlighted for you to checkout. If not, all the pictures will have a modal with the grade I received for it as well as the grader's comments on my application! <i>(Fun Fact: Graders left ZERO feedback on projects. I know.) </i>
           </p>
@@ -97,9 +100,7 @@ export default function Portfolio() {
       </div>
 
       <div className={`col-9 container-fluid pb-5  `} >
-        <div className="d-flex mt-5 flex-wrap justify-content-around gap-5" >
-
-
+        <div className="d-flex mt-5 flex-wrap justify-content-around gap-5" >  
           {/* project 1 */}
           <div className="text-center" >
             <a style={{ textDecoration: 'none' }} href="https://rxs291.github.io/5GuysMakingYourDateNight/"><h5>
@@ -410,7 +411,7 @@ export default function Portfolio() {
       {/* all modals connected to their own picture */}
       <ModalContent showModal={showModal} handleModalClose={handleModalClose} />
 
-
+      </div>
 
     </>
   );

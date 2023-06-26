@@ -1,18 +1,36 @@
 import React from 'react';
+import kiProfilePic from '../../images/kiProfilePic.jpg'
+
+import Carousel from '../Carousel'
 
 export default function About() {
   return (
-    <div class="col-9 container-fluid">
-      <h1>About Page</h1>
-      <p>
-        Green juice solarpunk sriracha grailed poutine quinoa paleo photo booth adaptogen kitsch hexagon aesthetic man braid. Retro single-origin coffee lumbersexual you probably haven't heard of them organic sriracha chia pok pok tattooed ethical kombucha chambray tacos blue bottle. 90's bicycle rights +1 gorpcore brunch hot chicken put a bird on it synth yes plz tousled lo-fi ethical hammock vape shaman. Chillwave gastropub wayfarers migas tofu, celiac iceland jawn. Cupping air plant pok pok big mood vibecession chillwave copper mug austin. Salvia cornhole four loko ascot four dollar toast mustache solarpunk. Knausgaard vibecession health goth gochujang blackbird spyplane vegan williamsburg aesthetic ramps lomo art party godard PBR&B single-origin coffee.
-
-        Waistcoat bruh shoreditch, cray letterpress drinking vinegar grailed 3 wolf moon. Cardigan small batch hoodie same man braid plaid. Bushwick venmo try-hard DIY whatever celiac adaptogen solarpunk gastropub coloring book vegan locavore hammock heirloom biodiesel. Green juice flannel shabby chic etsy organic vaporware grailed portland hot chicken austin meggings pork belly. Farm-to-table JOMO pickled small batch man braid, poke copper mug pug leggings hexagon.
-
-        JOMO snackwave gentrify unicorn, single-origin coffee subway tile squid bruh letterpress viral typewriter pork belly salvia mlkshk. Mustache pitchfork venmo, activated charcoal selvage food truck iPhone bespoke mukbang quinoa tattooed waistcoat portland. Jean shorts palo santo XOXO try-hard vibecession, man braid jawn farm-to-table viral vegan art party williamsburg selfies. Trust fund plaid intelligentsia small batch pabst chambray vegan four loko kombucha pork belly offal before they sold out actually. Echo park letterpress lomo, adaptogen banh mi tonx venmo mixtape jean shorts.
+    <div id='aboutContainer' class="col-9 container-fluid d-flex justify-content-around flex-wrap">
 
 
-      </p>
+
+      <div className='container col-5 mt-5'>
+        <h1>About Me</h1>
+
+        <div className='container-fluid d-flex flex-row flex-wrap justify-content-center pt-4 align-items-center'>
+          <img id='aboutPic' className='mb-3 mt-2' src={kiProfilePic} alt="coolKiPic" />
+
+          <p> Hey there! Let me introdouce myself a little more: I'm a proud dog dad to two hyperactive furballs, Malcolm and Jupiter. These two bring so much love and laughter to my life, I can't imagine a world without them! I'm a full-time volleyball junky as well! I live for the intense, highly competitive matches that get my heart racing. It's not just a game for me; it's a way to channel my competitive spirit and grow as a team player.
+
+            But here's the thing: it's not just about dogs and sports for me. I've got this burning desire to make the world a better place. I truly believe that with enough determination and collaboration, we can create a society that's kinder, more inclusive, and more compassionate. So, I'm on a mission to do my part, using my skills and influence to drive meaningful change.
+
+            That's me in a nutshell. Dog lover, volleyball enthusiast, and a dreamer with a mission to change the world for the better. Together, let's make a difference!</p>
+
+        </div>
+      </div>
+
+      <div className='container col-5 mt-5'>
+
+        <div className='container pt-5 mt-5 pe-5'>
+          <Carousel />
+        </div>
+
+      </div>
     </div>
   );
 }

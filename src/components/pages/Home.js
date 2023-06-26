@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <div class="col-9 container-fluid">
+    <div id='homeContainer' class="col-9 container-fluid">
       <h1>Home Page</h1>
       <p>
         Poke raw denim flexitarian chambray waistcoat vaporware. Hashtag pour-over gorpcore locavore. Activated charcoal swag marfa vexillologist cornhole post-ironic +1. Synth readymade typewriter polaroid seitan plaid shaman.

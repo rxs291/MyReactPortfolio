@@ -23,7 +23,68 @@ h1{
   color: var(--cream) ;
   font-style: italic;
   transition: transform 0.3s ease-in-out;
+  text-decoration: underline;
 }
+
+/* ----------------    navigation/header -------------------- */
+h1.nameTitle{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 3rem;
+  color: white;
+  text-decoration: none;
+  transition: 1s ease;
+
+}
+
+h1.nameTitle:hover{
+  color: var(--ochre);
+  transition: 1s ease;
+
+}
+
+#hoverLink a {
+  position: relative; 
+  border-radius: 5px;
+}
+
+#hoverLink a::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--ochre);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out; 
+}
+
+#hoverLink a:hover {
+  color: var(--ochre);
+}
+
+#hoverLink a:hover::after {
+  transform: scaleX(1);
+}
+
+@keyframes glowAnimation {
+  0% {
+    box-shadow: 0 0 0 rgba(249, 105, 14, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(249, 105, 14, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(249, 105, 14, 0.5);
+  }
+}
+
+#hoverLink a:hover {
+  animation: glowAnimation 1s infinite;
+}
+
+
+/* -------------------------------------------------- */
 
 h2{
   text-align: center;
@@ -49,12 +110,24 @@ h5:hover {
 
 p {
   font-size: 1.3em;
-} 
+}  
+ 
 
 
 
 
 /* ---------------  protfolio CSS all below here ----------------------------  */
+
+#portfolioContainer{
+
+  background:  rgb(196,163,90, .4) ; 
+  max-width: 1990px;
+  border: 5px double var(--cream);
+  border-radius: 15px;
+  margin-top: 50px;
+
+}
+
 
 p.card-text {
   font-size: 1em;
@@ -68,7 +141,7 @@ p.card-text {
 
 /* for the challenges */
 .cardContainer{
-  width: 25rem;
+  width: 25rem; 
 }
 
  
@@ -77,8 +150,9 @@ p.card-text {
 /* using this css to help show that the images are clickable */
 .card-img-top {
   transition: transform 0.3s ease-in-out;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
   border-radius: 50px; 
+  border: 3px solid var(--navy) !important;
 } 
 .card-img-top:hover {
   transform: scale(1.02);
@@ -106,3 +180,72 @@ p.card-text {
 .list4 {
   display: block;
 }
+
+ 
+/* ---------------  CONTACT PAGE CSS all below here ----------------------------  */
+
+#contactContainer{
+
+  background:  rgb(196,163,90, .4) ;
+  height: auto; 
+  border: 5px double var(--cream);
+  border-radius: 15px;
+  padding-bottom: 65px;
+
+}
+
+ #contactLinks {
+  text-decoration: none;
+  margin-left: 20px; 
+  color: var(--navy);
+  font-size: 1.8rem;
+}
+
+#linksList{
+  margin-top: 30px;
+  list-style-type: none;
+}
+
+
+/* -----------------ABOUT PAGE CSS all below here ------------------------------- */
+
+#aboutContainer{
+
+  background:  rgb(196,163,90, .4) ;
+  height: auto; 
+  border: 5px double var(--cream);
+  border-radius: 15px;
+  padding-bottom: 65px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+
+}
+
+#aboutPic{
+  border-radius: 15px;
+  height: 35rem;
+  border: 3px solid var(--navy);
+}
+
+
+/* -----------------HOME PAGE CSS all below here ------------------------------- */
+
+
+
+#homeContainer{
+
+    background:  rgb(196,163,90, .4) ;
+  height: auto; 
+  border: 5px double var(--cream);
+  border-radius: 15px;
+  padding-bottom: 65px;
+}
+
+.cardContainer2{
+  width: 25rem; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+}
+ 
