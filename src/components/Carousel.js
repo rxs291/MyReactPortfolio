@@ -39,7 +39,7 @@ const CarouselComponent = () => {
         },
         {
             title: 'Jupiter',
-            description: 'We thought he was gonna grow up, but he stayed tiny.', 
+            description: 'We thought Jupiter was gonna grow up, but he stayed tiny.', 
             image: jupiterReal,
         }, 
         {
@@ -50,12 +50,17 @@ const CarouselComponent = () => {
 
         // Add more carousel items here
     ];
-
+ 
     return (
         <>
 
 
-            <Carousel showArrows={false} showThumbs={true}  infiniteLoop={true}>
+            <Carousel  useKeyboardArrows={true} showArrows={true} showThumbs={true}  infiniteLoop={true}
+
+
+
+            
+            >
                 {carouselItems.map((item, index) => (
                     <div key={index} className="text-center align-items-center justify-content-center d-flex">
                         
