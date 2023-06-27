@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b340bbbd.css",
+    "main.js": "/static/js/main.2abd4365.js",
+    "static/media/testingVideo.mp4": "/static/media/testingVideo.69e88da9e2de91a997ca.mp4",
+    "static/media/01-html-css-git-homework-demo2.png": "/static/media/01-html-css-git-homework-demo2.8993ad9bbb097c734592.png",
+    "static/media/makaReal.jpg": "/static/media/makaReal.171b9878f04fe28415e2.jpg",
+    "static/media/malcolmReal.jpg": "/static/media/malcolmReal.a81ba701478aadfc22b8.jpg",
+    "static/media/jupiterReal.jpg": "/static/media/jupiterReal.6dfbc318612a163c558f.jpg",
+    "static/media/playTimeOver.JPG": "/static/media/playTimeOver.2f477b9e105f3a411ff7.JPG",
+    "static/media/fiveGuysPlanYourDateNight.JPG": "/static/media/fiveGuysPlanYourDateNight.fca23c9aa9ae28b20195.JPG",
+    "static/media/malcolmAndMe.jpg": "/static/media/malcolmAndMe.16c8470623f723614266.jpg",
+    "static/media/regexTutorial.JPG": "/static/media/regexTutorial.b266333ac036b1db0b0b.JPG",
+    "static/media/readyPetGo.JPG": "/static/media/readyPetGo.416184fa56631d43066d.JPG",
+    "static/media/firstPortfolio.JPG": "/static/media/firstPortfolio.c063e81bf9a912708145.JPG",
+    "static/media/weatherDashboard.JPG": "/static/media/weatherDashboard.38c539ec5a760e1c10a1.JPG",
+    "static/media/employeeTracker.JPG": "/static/media/employeeTracker.a4e9e1989f95f64a999c.JPG",
+    "static/media/readmeGenerator.JPG": "/static/media/readmeGenerator.9f55b7258a4f36d7c946.JPG",
+    "static/media/svgLogoMaker.JPG": "/static/media/svgLogoMaker.3878ae1f0a6e026c896e.JPG",
+    "static/media/techBloggers.JPG": "/static/media/techBloggers.981e298d55a9fe7f62f5.JPG",
+    "static/media/kiProfilePic.jpg": "/static/media/kiProfilePic.abe3072e067f71bb0b6a.jpg",
+    "static/media/ecomBackend.JPG": "/static/media/ecomBackend.ae3e4904cffc358383ca.JPG",
+    "static/media/maka.jpg": "/static/media/maka.49ec74cee36e663b8aff.jpg",
+    "static/media/friendsNetwork.JPG": "/static/media/friendsNetwork.db48db23798bac875beb.JPG",
+    "static/media/dayPlanner.JPG": "/static/media/dayPlanner.74a2d8f4c4f6e62829f6.JPG",
+    "static/media/quizAndScorekeeper.JPG": "/static/media/quizAndScorekeeper.f10edf379bffb13e9002.JPG",
+    "static/media/passwordGenerator.JPG": "/static/media/passwordGenerator.48d5122b9c64650226cd.JPG",
+    "static/media/noteTaker.JPG": "/static/media/noteTaker.c655172f508325aec0b3.JPG",
+    "static/media/jupiter.jpg": "/static/media/jupiter.a00456b646d3a4cf1b73.jpg",
+    "static/media/textEditor.JPG": "/static/media/textEditor.7d7ac72a69a95c44534b.JPG",
+    "index.html": "/index.html",
+    "main.b340bbbd.css.map": "/static/css/main.b340bbbd.css.map",
+    "main.2abd4365.js.map": "/static/js/main.2abd4365.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b340bbbd.css",
+    "static/js/main.2abd4365.js"
+  ]
+}
