@@ -19,7 +19,7 @@ export default function Home() {
         />
       </div>
       <p>
-        Poke raw denim flexitarian chambray waistcoat vaporware. Hashtag pour-over gorpcore locavore. Activated charcoal swag marfa vexillologist cornhole post-ironic +1. Synth readymade typewriter polaroid seitan plaid shaman.
+        I'm Really hoping this works! Testing running updates!
         {/* Remaining content */}
       </p>
     </div>
