@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MyReactPortfolio/static/css/main.d277bd29.css",
-    "main.js": "/MyReactPortfolio/static/js/main.560643cb.js",
+    "main.css": "/MyReactPortfolio/static/css/main.c15c54d4.css",
+    "main.js": "/MyReactPortfolio/static/js/main.4f0bac4e.js",
     "static/media/testingVideo.mp4": "/MyReactPortfolio/static/media/testingVideo.69e88da9e2de91a997ca.mp4",
     "static/media/01-html-css-git-homework-demo2.png": "/MyReactPortfolio/static/media/01-html-css-git-homework-demo2.8993ad9bbb097c734592.png",
     "static/media/makaReal.jpg": "/MyReactPortfolio/static/media/makaReal.171b9878f04fe28415e2.jpg",
@@ -29,11 +29,11 @@
     "static/media/jupiter.jpg": "/MyReactPortfolio/static/media/jupiter.a00456b646d3a4cf1b73.jpg",
     "static/media/textEditor.JPG": "/MyReactPortfolio/static/media/textEditor.7d7ac72a69a95c44534b.JPG",
     "index.html": "/MyReactPortfolio/index.html",
-    "main.d277bd29.css.map": "/MyReactPortfolio/static/css/main.d277bd29.css.map",
-    "main.560643cb.js.map": "/MyReactPortfolio/static/js/main.560643cb.js.map"
+    "main.c15c54d4.css.map": "/MyReactPortfolio/static/css/main.c15c54d4.css.map",
+    "main.4f0bac4e.js.map": "/MyReactPortfolio/static/js/main.4f0bac4e.js.map"
   },
   "entrypoints": [
-    "static/css/main.d277bd29.css",
-    "static/js/main.560643cb.js"
+    "static/css/main.c15c54d4.css",
+    "static/js/main.4f0bac4e.js"
   ]
 }
