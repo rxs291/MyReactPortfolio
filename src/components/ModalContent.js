@@ -1,7 +1,25 @@
-import React from 'react';
-import { Modal } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import { Modal, Button } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const ModalContent = ({ showModal, handleModalClose }) => {
+
+  const [showCloseButton, setShowCloseButton] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const isMobile = window.innerWidth <= 767;
+      setShowCloseButton(isMobile);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
 
 
@@ -15,6 +33,11 @@ const ModalContent = ({ showModal, handleModalClose }) => {
           <div >
             <Modal.Title > <i>  5 Guys Plan Your Date Night </i></Modal.Title>
           </div>
+                  {showCloseButton && (
+          <Button variant="" onClick={() => handleModalClose('modal1')}>
+            <FontAwesomeIcon icon={faTimes} size='2x' />
+          </Button>
+        )}   
         </Modal.Header>
         <Modal.Body>
           <b> My Contributions</b>:
@@ -28,6 +51,7 @@ const ModalContent = ({ showModal, handleModalClose }) => {
           <b>GitHub Link</b>: <a href="https://github.com/rxs291/5GuysMakingYourDateNight">https://github.com/rxs291/5GuysMakingYourDateNight</a>
         </Modal.Body>
         <Modal.Footer>
+ 
           {/* modal footer info */}
           <b>Grade: 84/100</b>
         </Modal.Footer>
@@ -39,6 +63,11 @@ const ModalContent = ({ showModal, handleModalClose }) => {
           <div >
             <Modal.Title > <i>  PLAY-TIME-OVER  </i></Modal.Title>
           </div>
+                  {showCloseButton && (
+          <Button variant=" " onClick={() => handleModalClose('modal2')}>
+            <FontAwesomeIcon icon={faTimes} size='2x' />
+          </Button>
+        )}  
         </Modal.Header>
         <Modal.Body>
           <b> My Contributions</b>:
@@ -62,6 +91,11 @@ const ModalContent = ({ showModal, handleModalClose }) => {
           <div >
             <Modal.Title > <i>  Ready, Pet, Go!  </i></Modal.Title>
           </div>
+                  {showCloseButton && (
+          <Button variant=" " onClick={() => handleModalClose('modal3')}>
+            <FontAwesomeIcon icon={faTimes} size='2x' />
+          </Button>
+        )}  
         </Modal.Header>
         <Modal.Body>
           <b> My Contributions</b>:
@@ -76,7 +110,7 @@ const ModalContent = ({ showModal, handleModalClose }) => {
         </Modal.Body>
         <Modal.Footer>
           {/* modal footer info */}
-          <b>Grade: Grade to Come</b>
+          <b>Grade: 100/100</b>
         </Modal.Footer>
       </Modal>
 
@@ -88,6 +122,11 @@ const ModalContent = ({ showModal, handleModalClose }) => {
           <div >
             <Modal.Title > <i>  CodeRefactor  </i></Modal.Title>
           </div>
+                  {showCloseButton && (
+          <Button variant=" " onClick={() => handleModalClose('modal4')}>
+            <FontAwesomeIcon icon={faTimes} size='2x' />
+          </Button>
+        )}  
         </Modal.Header>
         <Modal.Body>
           <b> My Contributions</b>:
@@ -127,6 +166,11 @@ const ModalContent = ({ showModal, handleModalClose }) => {
           <div >
             <Modal.Title > <i>  First Portfolio  </i></Modal.Title>
           </div>
+                  {showCloseButton && (
+          <Button variant=" " onClick={() => handleModalClose('modal5')}>
+            <FontAwesomeIcon icon={faTimes} size='2x' />
+          </Button>
+        )}  
         </Modal.Header>
         <Modal.Body>
           <b> My Contributions</b>:
@@ -175,6 +219,11 @@ const ModalContent = ({ showModal, handleModalClose }) => {
           <div >
             <Modal.Title > <i>  PasswordGenerator  </i></Modal.Title>
           </div>
+                  {showCloseButton && (
+          <Button variant=" " onClick={() => handleModalClose('modal6')}>
+            <FontAwesomeIcon icon={faTimes} size='2x' />
+          </Button>
+        )}  
         </Modal.Header>
         <Modal.Body>
           <b> My Contributions</b>:
@@ -211,6 +260,11 @@ const ModalContent = ({ showModal, handleModalClose }) => {
           <div >
             <Modal.Title > <i>  QuizAndScoreKeeper  </i></Modal.Title>
           </div>
+                  {showCloseButton && (
+          <Button variant=" " onClick={() => handleModalClose('modal7')}>
+            <FontAwesomeIcon icon={faTimes} size='2x' />
+          </Button>
+        )}  
         </Modal.Header>
         <Modal.Body>
           <b> My Contributions</b>:
@@ -242,6 +296,11 @@ const ModalContent = ({ showModal, handleModalClose }) => {
           <div >
             <Modal.Title > <i>  DayPlanner  </i></Modal.Title>
           </div>
+                  {showCloseButton && (
+          <Button variant=" " onClick={() => handleModalClose('modal8')}>
+            <FontAwesomeIcon icon={faTimes} size='2x' />
+          </Button>
+        )}  
         </Modal.Header>
         <Modal.Body>
           <b> My Contributions</b>:
@@ -290,6 +349,11 @@ const ModalContent = ({ showModal, handleModalClose }) => {
           <div >
             <Modal.Title > <i>  WeatherForecaster  </i></Modal.Title>
           </div>
+                  {showCloseButton && (
+          <Button variant=" " onClick={() => handleModalClose('modal9')}>
+            <FontAwesomeIcon icon={faTimes} size='2x' />
+          </Button>
+        )}  
         </Modal.Header>
         <Modal.Body>
           <b> My Contributions</b>:
@@ -344,6 +408,11 @@ const ModalContent = ({ showModal, handleModalClose }) => {
           <div >
             <Modal.Title > <i>  Readme Generator </i></Modal.Title>
           </div>
+                  {showCloseButton && (
+          <Button variant=" " onClick={() => handleModalClose('modal10')}>
+            <FontAwesomeIcon icon={faTimes} size='2x' />
+          </Button>
+        )}  
         </Modal.Header>
         <Modal.Body>
           <b> My Contributions</b>:
@@ -376,6 +445,11 @@ const ModalContent = ({ showModal, handleModalClose }) => {
           <div >
             <Modal.Title > <i> SVG Logo Maker  </i></Modal.Title>
           </div>
+                  {showCloseButton && (
+          <Button variant=" " onClick={() => handleModalClose('modal11')}>
+            <FontAwesomeIcon icon={faTimes} size='2x' />
+          </Button>
+        )}  
         </Modal.Header>
         <Modal.Body>
           <b> My Contributions</b>:
@@ -415,6 +489,11 @@ const ModalContent = ({ showModal, handleModalClose }) => {
           <div >
             <Modal.Title > <i>  Note Taker  </i></Modal.Title>
           </div>
+                  {showCloseButton && (
+          <Button variant=" " onClick={() => handleModalClose('modal12')}>
+            <FontAwesomeIcon icon={faTimes} size='2x' />
+          </Button>
+        )}  
         </Modal.Header>
         <Modal.Body>
           <b> My Contributions</b>:
@@ -453,6 +532,11 @@ const ModalContent = ({ showModal, handleModalClose }) => {
           <div >
             <Modal.Title > <i>  Employee Tracker  </i></Modal.Title>
           </div>
+                  {showCloseButton && (
+          <Button variant=" " onClick={() => handleModalClose('modal13')}>
+            <FontAwesomeIcon icon={faTimes} size='2x' />
+          </Button>
+        )}  
         </Modal.Header>
         <Modal.Body>
           <b> My Contributions</b>:
@@ -496,6 +580,11 @@ const ModalContent = ({ showModal, handleModalClose }) => {
           <div >
             <Modal.Title > <i>  E-commerce Back End  </i></Modal.Title>
           </div>
+                  {showCloseButton && (
+          <Button variant=" " onClick={() => handleModalClose('modal14')}>
+            <FontAwesomeIcon icon={faTimes} size='2x' />
+          </Button>
+        )}  
         </Modal.Header>
         <Modal.Body>
           <b> My Contributions</b>:
@@ -531,6 +620,11 @@ const ModalContent = ({ showModal, handleModalClose }) => {
           <div >
             <Modal.Title > <i>  Tech Blog  </i></Modal.Title>
           </div>
+                  {showCloseButton && (
+          <Button variant=" " onClick={() => handleModalClose('modal15')}>
+            <FontAwesomeIcon icon={faTimes} size='2x' />
+          </Button>
+        )}  
         </Modal.Header>
         <Modal.Body>
           <b> My Contributions</b>:
@@ -572,6 +666,11 @@ const ModalContent = ({ showModal, handleModalClose }) => {
           <div >
             <Modal.Title > <i>  Regex Tutorial  </i></Modal.Title>
           </div>
+                  {showCloseButton && (
+          <Button variant=" " onClick={() => handleModalClose('modal16')}>
+            <FontAwesomeIcon icon={faTimes} size='2x' />
+          </Button>
+        )}  
         </Modal.Header>
         <Modal.Body>
           <b> My Contributions</b>:
@@ -616,6 +715,11 @@ const ModalContent = ({ showModal, handleModalClose }) => {
           <div >
             <Modal.Title > <i>  Social Network API  </i></Modal.Title>
           </div>
+                  {showCloseButton && (
+          <Button variant=" " onClick={() => handleModalClose('modal17')}>
+            <FontAwesomeIcon icon={faTimes} size='2x' />
+          </Button>
+        )}  
         </Modal.Header>
         <Modal.Body>
           <b> My Contributions</b>:
@@ -658,6 +762,11 @@ const ModalContent = ({ showModal, handleModalClose }) => {
           <div >
             <Modal.Title > <i>  (PWA): Text Editor  </i></Modal.Title>
           </div>
+                  {showCloseButton && (
+          <Button variant=" " onClick={() => handleModalClose('modal18')}>
+            <FontAwesomeIcon icon={faTimes} size='2x' />
+          </Button>
+        )}  
         </Modal.Header>
         <Modal.Body>
           <b> My Contributions</b>:

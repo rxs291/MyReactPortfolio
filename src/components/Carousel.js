@@ -19,7 +19,7 @@ const CarouselComponent = () => {
         // Array of carousel items goes here
         {
             title: 'Malcolm',
-            description: 'Malcolm', 
+            description: 'My hobbies: watching tv with ma n` pa, hiking for 5 minutes then being carried, bullying Jupiter.', 
             image: malcolmReal,
         },
         {
@@ -29,7 +29,7 @@ const CarouselComponent = () => {
         },
         {
             title: 'Maka',
-            description: 'Maka, step-sibling.', 
+            description: 'My hobbies: chasing squirrels, devouring scrambled eggs, sneaking food off plates.', 
             image: makaReal,
         }, 
         {
@@ -39,7 +39,7 @@ const CarouselComponent = () => {
         },
         {
             title: 'Jupiter',
-            description: 'We thought Jupiter was gonna grow up, but he stayed tiny.', 
+            description: 'We thought Jupiter was gonna grow up, but he stayed tiny. Will forever look and act like a pup. Only hobby: fetch. For days.', 
             image: jupiterReal,
         }, 
         {
@@ -64,7 +64,9 @@ const CarouselComponent = () => {
                 {carouselItems.map((item, index) => (
                     <div key={index} className="text-center align-items-center justify-content-center d-flex">
                         
-                        <div className="cardContainer2">
+                        <div className="cardContainer2"> 
+                            <h5>{item.title}</h5>
+                            <br />
                             <img
                             
                                 src={item.image}

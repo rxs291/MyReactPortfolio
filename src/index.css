@@ -26,6 +26,11 @@ h1{
   text-decoration: underline;
 }
 
+.paragraphBreak{
+  width: 50%;
+  margin: auto;
+}
+
 /* ----------------    navigation/header -------------------- */
 h1.nameTitle{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -45,6 +50,7 @@ h1.nameTitle:hover{
 #hoverLink a {
   position: relative; 
   border-radius: 5px;
+  font-size: 22px;
 }
 
 #hoverLink a::after {
@@ -81,6 +87,14 @@ h1.nameTitle:hover{
 
 #hoverLink a:hover {
   animation: glowAnimation 1s infinite;
+}
+
+@media (max-width: 768px) {
+
+  #hoverLink a{
+    font-size: 18px; 
+  }
+ 
 }
 
 
@@ -121,7 +135,7 @@ p {
 #portfolioContainer{
 
   background:  rgb(196,163,90, .4) ; 
-  max-width: 1990px;
+  max-width: 80%;
   border: 5px double var(--cream);
   border-radius: 15px;
   margin-top: 50px;
@@ -135,16 +149,16 @@ p.card-text {
  
 
 /* for the projects */
-.cardContainer1{
-  width: 28rem;
+.cardContainer1 {
+  width: 100%;
+  max-width: 28rem;
 }
 
 /* for the challenges */
-.cardContainer{
-  width: 25rem; 
+.cardContainer {
+  width: 100%;
+  max-width: 25rem;
 }
-
- 
  
 
 /* using this css to help show that the images are clickable */
@@ -159,9 +173,27 @@ p.card-text {
   cursor: pointer;
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+
+  #portfolioContainer{
+    
+    max-width: 85%;
+  
+  }
+
+  .cardContainer1 {
+    max-width: 100%;
+  }
+
+  .cardContainer {
+    max-width: 100%;
+  }
+}
+
 /* this will help toggle the display of the cards on the portfolio page */
 
-.hidden {
+/* .hidden {
   display: none;
 }
 
@@ -179,7 +211,8 @@ p.card-text {
 
 .list4 {
   display: block;
-}
+} */
+
 
  
 /* ---------------  CONTACT PAGE CSS all below here ----------------------------  */
@@ -206,6 +239,34 @@ p.card-text {
   list-style-type: none;
 }
 
+@media (max-width: 767px) {
+  #contactContainer {
+    width: 85%;
+    padding-bottom: 0;
+    margin-bottom: 25px;
+  }
+
+  ul {
+    text-align: left;
+    padding-left: 0;
+    font-size: .8rem;
+  }
+
+  #contactLinks{
+    font-size: 1.5rem;
+  }
+
+  #linksList {
+    margin: 15px 0;
+     
+  }
+
+    #linksList a {
+      
+      font-size: 20px;
+  }
+}
+
 
 /* -----------------ABOUT PAGE CSS all below here ------------------------------- */
 
@@ -227,6 +288,28 @@ p.card-text {
   border: 3px solid var(--navy);
 }
 
+@media (max-width: 767px) {
+  #aboutContainer { 
+    width: 85%;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+    margin-bottom: 25px; 
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  #aboutPic {
+    max-width: 100%;
+    height: auto;
+  }
+  .carousel{ 
+    margin-left: 15px;
+  }
+}
+
 
 /* -----------------HOME PAGE CSS all below here ------------------------------- */
 
@@ -243,6 +326,7 @@ p.card-text {
   flex-direction: column; 
   align-items: center;
   margin-top: 55px;
+  margin-bottom: 20px;
 }
 
 .cardContainer2{
@@ -267,3 +351,12 @@ p.card-text {
   margin-top: 30px;
 }
  
+@media (max-width: 767px) {
+  #homeContainer { 
+    width: 85%;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+    margin-bottom: 25px; 
+  } 
+}

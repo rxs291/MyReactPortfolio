@@ -24,7 +24,7 @@ export default function Contact() {
     <div>
       <div id="contactContainer" className="container d-flex flex-wrap justify-content-around  mt-5 pt-5">
         <div>
-        <h1 className='pb-4'>Contact Me Here</h1>
+        <h1 className='pb-4'>Reach Out To Me Here</h1>
         <ul>
           <li id='linksList'>
             <FontAwesomeIcon icon={faLinkedin} size='2x' />
@@ -32,7 +32,7 @@ export default function Contact() {
           </li>
           <li id='linksList'>
             <FontAwesomeIcon icon={faEnvelope} size='2x' />
-            <a id='contactLinks' href="#"> rxs291@yahoo.com</a>
+            <a id='contactLinks' href="#"> sarchan.rex@gmail.com</a>
           </li>
           <li id='linksList'>
             <FontAwesomeIcon icon={faGithub} size='2x' />
@@ -113,19 +113,30 @@ const StyledContactForm = styled.div`
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 767px) {
     form {
-      font-size: 14px;
+      font-size: 14px; 
+      align-items: center;
 
       input,
       textarea {
         height: 30px;
         padding: 5px;
+        width: 80%;
       }
 
       label {
-        font-size: 1.2rem;
+        font-size: rem;
       }
+    }
+  }
+
+  @media (max-width: 420px) {
+    form { 
+      input,
+      textarea { 
+        width: 60%;
+      } 
     }
   }
 `;
