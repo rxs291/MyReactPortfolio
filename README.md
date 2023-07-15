@@ -13,7 +13,7 @@
 <a name="desc"></a>
 ## 1. Descrption
 
-[I'm an inline-style link with title](https://rxs291.github.io/MyReactPortfolio "Vist my portfolio here!")
+[Vist my portfolio here!](https://rxs291.github.io/MyReactPortfolio "Vist my portfolio here!")
  
 
 <a name="install"></a>
